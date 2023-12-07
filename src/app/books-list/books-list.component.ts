@@ -10,6 +10,7 @@ export class BooksListComponent {
   books:any;
   newBook:any={};
   oszlopok=['title','description', 'author'];
+  kif="";
 
   constructor(private base: BaseService){
     this.base.getBooks().subscribe(

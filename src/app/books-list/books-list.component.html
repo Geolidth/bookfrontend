@@ -9,7 +9,8 @@
         <div class="col-2">Author</div>
         <div class="col-2">Actions</div>
     </div> -->
-
+    <label for="kereso" >Keresés</label>
+    <input [(ngModel)]="kif" type="text" id="kereso" class="form-control">
     <div class="row">
         <div *ngFor="let oszlop of oszlopok" class="col">{{oszlop}}</div>
         <div class="col">Actions</div>
@@ -25,7 +26,7 @@
     </div>
 
 
-    <div *ngFor="let book of books" class="row mt-2">
+    <div *ngFor="let book of books|kereso:kif" class="row mt-2">
         <div *ngFor="let oszlop of oszlopok" class="col">
             <input [(ngModel)]="book[oszlop]" type="text" class="form-control">
         </div>

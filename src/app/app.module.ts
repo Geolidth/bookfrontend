@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BooksListComponent } from './books-list/books-list.component';
 import { FormsModule } from '@angular/forms';
+import { KeresoPipe } from './kereso.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooksListComponent
+    BooksListComponent,
+    KeresoPipe
   ],
   imports: [
     BrowserModule,
